@@ -180,18 +180,18 @@ int main()
 
     
     //Test all motors with different frequencies (to make different noises)
-    motor1.period(1.0/400);
-    motor1=0.2;
-    wait(0.5);
-    motor2.period(1.0/600);
-    motor2=0.2;
-    wait(0.5);
-    motor3.period(1.0/800);
-    motor3=0.2;
-    wait(0.5);
-    motor4.period(1.0/1000);
-    motor4=0.2;
-    wait(1);
+    // motor1.period(1.0/400);
+    // motor1=0.2;
+    // wait(0.5);
+    // motor2.period(1.0/600);
+    // motor2=0.2;
+    // wait(0.5);
+    // motor3.period(1.0/800);
+    // motor3=0.2;
+    // wait(0.5);
+    // motor4.period(1.0/1000);
+    // motor4=0.2;
+    // wait(1);
 
     Cucaracha();
 
