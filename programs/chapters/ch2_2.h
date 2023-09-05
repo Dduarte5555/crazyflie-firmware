@@ -24,9 +24,9 @@ int main(){
     motor4.period(1.0/500.0);
 
     // Liga o motor com velocidade angular de 1000 rad/s por 5 seg
-    motor1 = control_motor(2000.0);
+    motor1 = control_motor(1000.0);
     motor2 = control_motor(2000.0);
-    motor3 = control_motor(2000.0);
+    motor3 = control_motor(1000.0);
     motor4 = control_motor(2000.0);
     wait(5);
 
