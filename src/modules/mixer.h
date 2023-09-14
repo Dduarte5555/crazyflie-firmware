@@ -12,7 +12,10 @@ class Mixer
         Mixer();
 
         // Actuate motors with desired total trust force (N) and torques (N.m)
-        void actuate(float f_t, float tau_phi, float tau_theta, float tau_psi) ;
+        void actuate(float f_t, float tau_phi, float tau_theta, float tau_psi);
+
+        bool arm();
+        bool disarm();
 
     private :
         // Motors PWM outputs
