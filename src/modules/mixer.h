@@ -13,6 +13,11 @@ class Mixer
 
         // Actuate motors with desired total trust force (N) and torques (N.m)
         void actuate(float f_t, float tau_phi, float tau_theta, float tau_psi);
+        void beep1(int freq, float period);
+        void beep2(int freq, float period);
+        void beep3(int freq, float period);
+        void beep4(int freq, float period);
+        void StartupSong();
 
         bool arm();
         bool disarm();
@@ -30,5 +35,6 @@ class Mixer
         // Convert desired angular velocity ( rad/s) to PWM signal (%)
         float control_motor(float omega);
 };
+
 
 # endif

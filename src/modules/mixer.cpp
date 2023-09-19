@@ -5,6 +5,8 @@ DigitalOut ledRR(LED_RED_R,!false);
 DigitalOut ledRL(LED_RED_L,!false);
 DigitalOut ledGR(LED_GREEN_R,!false);
 DigitalOut ledGL(LED_GREEN_L,!false);
+
+
 // Class constructor
 Mixer::Mixer() : motor_1(MOTOR1), motor_2(MOTOR2), motor_3(MOTOR3), motor_4(MOTOR4){
     motor_1.period (1.0/500.0) ;
@@ -17,14 +19,67 @@ Mixer::Mixer() : motor_1(MOTOR1), motor_2(MOTOR2), motor_3(MOTOR3), motor_4(MOTO
     motor_4 = 0.0;
 }
 
+void Mixer::beep1(int freq, float period){
+    motor_1.period(1.0/((float) freq));
+    motor_1 = 0.2;
+    wait_ms(period);
+    motor_1 = 0.0;
+    //wait(0.05);
+}
+
+void Mixer::beep2(int freq, float period){
+    motor_2.period(1.0/((float) freq));
+    motor_2 = 0.2;
+    wait_ms(period);
+    motor_2 = 0.0;
+    //wait(0.05);
+}
+
+void Mixer::beep3(int freq, float period){
+    motor_3.period(1.0/((float) freq));
+    motor_3 = 0.2;
+    wait_ms(period);
+    motor_3 = 0.0;
+    //wait(0.05);
+}
+
+void Mixer::beep4(int freq, float period){
+    motor_4.period(1.0/((float) freq));
+    motor_4 = 0.2;
+    wait_ms(period);
+    motor_4 = 0.0;
+    //wait(0.05);
+}
+
+void Mixer::StartupSong(){
+  beep1(Do, 125);
+  beep2(Do, 125);
+  beep3(Do, 125);
+  beep4(Fa, 125);
+  wait_ms(125);
+  beep1(La, 125);
+  wait_ms(125);
+  beep2(Do, 125);
+  beep3(Do, 125);
+  beep4(Do, 125);
+  wait_ms(125);
+  beep1(Fa, 250);
+  beep2(La, 650);
+  wait_ms(125);
+}
+
 // Checagem de Segurança
 bool Mixer::arm(){
+
     ledRL=! ledRL;
     wait(1);
     ledRR=! ledRR;
     wait(1);
     ledRR=! ledRR;
     ledRL=! ledRL;
+
+    StartupSong();
+
     return armed = true;
 }
 

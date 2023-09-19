@@ -12,7 +12,7 @@ int main(){
     wait(2);
     
     // Actuate motor with 50% mg total thrust force (N) and zero torques
-    mixer.actuate(0.1, 0, 0, 0);
+    mixer.actuate(0, 0, 0, 0);
     wait(5);
     
     // Turn off all motors
