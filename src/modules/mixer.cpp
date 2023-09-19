@@ -52,20 +52,16 @@ void Mixer::beep4(int freq, float period){
 }
 
 void Mixer::StartupSong(){
-  beep1(Do, 125);
-  beep2(Do, 125);
-  beep3(Do, 125);
-  beep4(Fa, 125);
-  wait_ms(125);
-  beep1(La, 125);
-  wait_ms(125);
-  beep2(Do, 125);
-  beep3(Do, 125);
-  beep4(Do, 125);
-  wait_ms(125);
-  beep1(Fa, 250);
-  beep2(La, 650);
-  wait_ms(125);
+  beep1(Do, 160);
+  beep2(Do, 160);
+  beep3(Do, 160);
+  beep4(Fa, 480);
+  beep1(La, 320);
+  beep2(Do, 160);
+  beep3(Do, 160);
+  beep4(Do, 160);
+  beep1(Fa, 480);
+  beep2(La, 320);
 }
 
 // Checagem de Segurança
