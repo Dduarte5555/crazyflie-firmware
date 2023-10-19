@@ -17,10 +17,11 @@ class AttitudeEstimator
         // Euler angles (rad)
         float phi, theta, psi;
         // Angular velocities ( rad /s)
-        float p, q, r;
+        float p, p_bias, q, q_bias, r, r_bias;
     private :
         // IMU sensor object
         BMI088 imu;
+        DigitalOut ledRR, ledRL;
 };
 
 # endif
