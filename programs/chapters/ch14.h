@@ -44,7 +44,7 @@ int main()
         {
             command = serial.getc();
             if (command == 'p'){
-                serial.printf ("%f ,%f ,%f\n", att_est.phi, att_est.theta, att_est.psi);
+                serial.printf ("%f,%f,%f\n", att_est.phi, att_est.theta, att_est.psi);
             }
         }
     }
