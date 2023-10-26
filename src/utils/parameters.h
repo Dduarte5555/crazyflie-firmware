@@ -17,6 +17,31 @@ const float I_yy = 16.0e-6; // kg.m^2
 const float I_zz = 29.0e-6; // kg.m^2
 const float l = 33.0e-3;    // m
 
+// phi
+const float ts_phi = 0.3;
+const float os_phi = 0.005;
+const float zeta_phi = abs(log(os_phi))/sqrt(pow(log(os_phi),2) + pow(pi,2));
+const float wn_phi = 4/(zeta_phi*ts_phi);
+const float kp_phi = pow(wn_phi, 2);
+const float kd_phi = 2*zeta_phi*wn_phi;
+
+// theta
+const float ts_theta = 0.3;
+const float os_theta = 0.005;
+const float zeta_theta = abs(log(os_theta))/sqrt(pow(log(os_theta),2) + pow(pi,2));
+const float wn_theta = 4/(zeta_theta*ts_theta);
+const float kp_theta = pow(wn_theta,2);
+const float kd_theta = 2*zeta_theta*wn_theta;
+
+// psi
+const float ts_psi = 2;
+const float os_psi = 0.005;
+const float zeta_psi = abs(log(os_psi))/sqrt(pow(log(os_psi),2) + pow(pi,2));
+const float wn_psi = 4/(zeta_psi*ts_psi);
+const float kp_psi = pow(wn_psi,2);
+const float kd_psi = 2*zeta_psi*wn_psi;
+
+// O resto
 const float a2 = 1.4e-7;
 const float kl = 1.7e-8;
 const float kd = 1.012e-10;

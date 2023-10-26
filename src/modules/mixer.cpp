@@ -74,7 +74,7 @@ bool Mixer::arm(){
     ledRR=! ledRR;
     ledRL=! ledRL;
 
-    StartupSong();
+    // StartupSong();
 
     return armed = true;
 }
