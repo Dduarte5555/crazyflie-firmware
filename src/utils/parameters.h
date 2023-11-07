@@ -12,6 +12,12 @@ const float alpha = (wc*dt)/(1+(wc*dt));
 const float l_vert = 10.0;
 const float dt_range = 0.05;
 
+const float l1_vert = 100;
+const float l2_vert = 2 * (sqrt(2)/2) * 10;
+
+const float kp_vert = 5.8567;
+const float kd_vert = 3.4225;
+
 // Quadcopter dimensions
 const float m = 30.0e-3;    // kg
 const float I_xx = 16.0e-6; // kg.m^2
