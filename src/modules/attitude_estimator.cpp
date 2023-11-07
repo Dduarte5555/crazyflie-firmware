@@ -43,8 +43,8 @@ void AttitudeEstimator :: estimate ()
     float phi_g = phi + (p + sin(phi) * tan(theta) * q + cos(phi) * tan(theta) * r) * dt;
     float phi_a = atan2(-imu.ay, -imu.az);
 
-    float theta_g = theta + (cos(theta) * q - sin(theta) *r) * dt;
-    float theta_a = atan2(imu.ax, -(((imu.az>0)-(imu.az<0))*sqrt(pow(imu.az, 2)+pow(imu.ay, 2))));
+    float theta_g = theta + (cos(phi) * q - sin(phi) *r) * dt;
+    float theta_a = atan2(imu.ax, (-((imu.az>0)-(imu.az<0))*sqrt(pow(imu.az, 2)+pow(imu.ay, 2))));
 
     float psi_g = psi + (sin(phi) * (1/cos(theta)) * q + cos(phi)* (1/cos(theta)) * r) * dt;
 
