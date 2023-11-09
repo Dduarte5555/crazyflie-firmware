@@ -18,6 +18,14 @@ const float l2_vert = 2 * (sqrt(2)/2) * 10;
 const float kp_vert = 5.8567;
 const float kd_vert = 3.4225;
 
+
+const float wc_horizontal = 50.0;
+const float l_horizontal = 50.0;
+const float gamma_horizontal = 42.0*pi/180.0;
+const float W_sensor = 420;
+const float sigma_horizontal = (2.0*tan(gamma_horizontal/2.0))/(W_sensor * dt);
+
+
 // Quadcopter dimensions
 const float m = 30.0e-3;    // kg
 const float I_xx = 16.0e-6; // kg.m^2
