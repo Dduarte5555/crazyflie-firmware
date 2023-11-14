@@ -18,6 +18,14 @@ const float l2_vert = 2 * (sqrt(2)/2) * 10;
 const float kp_vert = 5.8567;
 const float kd_vert = 3.4225;
 
+//horizontal
+const float ts_horizontal = 2;
+const float os_horizontal = 0.005;
+const float zeta_horizontal = abs(log(os_horizontal))/sqrt(pow(log(os_horizontal),2) + pow(pi,2));
+const float wn_horizontal = 4/(zeta_horizontal*ts_horizontal);
+const float kp_horizontal = pow(wn_horizontal, 2);
+const float kd_horizontal = 2*zeta_horizontal*wn_horizontal;
+
 
 const float wc_horizontal = 50.0;
 const float l_horizontal = 50.0;
