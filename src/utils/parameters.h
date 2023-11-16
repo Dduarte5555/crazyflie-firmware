@@ -19,7 +19,7 @@ const float kp_vert = 5.8567;
 const float kd_vert = 3.4225;
 
 //horizontal
-const float ts_horizontal = 2;
+const float ts_horizontal = 2.0;
 const float os_horizontal = 0.005;
 const float zeta_horizontal = abs(log(os_horizontal))/sqrt(pow(log(os_horizontal),2) + pow(pi,2));
 const float wn_horizontal = 4/(zeta_horizontal*ts_horizontal);
@@ -58,7 +58,7 @@ const float kp_theta = pow(wn_theta,2);
 const float kd_theta = 2*zeta_theta*wn_theta;
 
 // psi
-const float ts_psi = 2;
+const float ts_psi = 0.6;
 const float os_psi = 0.005;
 const float zeta_psi = abs(log(os_psi))/sqrt(pow(log(os_psi),2) + pow(pi,2));
 const float wn_psi = 4/(zeta_psi*ts_psi);

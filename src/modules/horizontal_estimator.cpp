@@ -20,8 +20,8 @@ void HorizontalEstimator::predict(float phi, float theta)
 {
     x = x + u * dt;
     y = y + v * dt;
-    //u = u + g * theta * dt;
-    //v = v - g * phi * dt;
+    u = u + g * theta * dt;
+    v = v - g * phi * dt;
 }
 
 // Correct horizontal velocities with measurements

@@ -18,11 +18,11 @@ void AttitudeController::control(float phi_r, float theta_r, float psi_r, float 
 float AttitudeController::control_siso(float angle_r, float angle, float rate, float kp, float kd)
 {
     // Caso 2 
-    float preResult = (kp/kd)*(angle_r-angle);
-    float result = kd*(preResult-rate);
-    return result;
+    // float preResult = (kp/kd)*(angle_r-angle);
+    // float result = kd*(preResult-rate);
+    // return result;
 
     // Caso 3
-    // float result = kp*(angle_r-angle) + kd*(0-rate);
-    // return result; 
+    float result = kp*(angle_r-angle) + kd*(0-rate);
+    return result; 
 }

@@ -33,18 +33,19 @@ float tempo;
 int main()
 {
     // Set references
-    float z_r = -0.5;
+    float z_r = 0.0;
     float x_r = 0.0;
     float y_r = 0.0;
     float psi_r = 0.0;
 
     float h = 1.0;
-    float d = 2.0;
-    float tempo_decolagem = 2.0;
+    float d = 2.20;
+    float tempo_decolagem = 1.8;
     float tempo_voo = 5.0;
-    float tempo_pouso = 2.0;
+    float tempo_pouso = 2.2;
 
     // Initialize estimators objects
+    wait(1); 
     att_est.init();
     ver_est.init();
     hor_est.init();
@@ -75,13 +76,18 @@ int main()
             else if(tempo < tempo_decolagem + tempo_voo)
             {
                 z_r = h;
-                x_r = 0;
+                x_r = (d/tempo_voo)*tempo - (d/tempo_voo)*tempo_decolagem;
             }
 
-            else if(tempo < tempo_decolagem + tempo_voo + tempo_pouso)
+            else if(tempo < tempo_decolagem + tempo_voo + tempo_pouso + 1.0)
             {
                 z_r = -(h/tempo_pouso) * tempo + (h/tempo_pouso) * (tempo_decolagem + tempo_voo + tempo_pouso);
-                x_r = 0;
+                x_r = d;
+            }
+
+            else{
+                z_r=0;
+                x_r=d;
             }
 
             att_est.estimate();
