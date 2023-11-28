@@ -38,11 +38,11 @@ int main()
     float y_r = 0.0;
     float psi_r = 0.0;
 
-    float h = 1.0;
-    float d = 2.20;
+    float h = 0.5;
+    float d = 2.2;
     float tempo_decolagem = 1.8;
     float tempo_voo = 5.0;
-    float tempo_pouso = 2.2;
+    float tempo_pouso = 2.5;
 
     // Initialize estimators objects
     wait(1); 
